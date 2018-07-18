@@ -11,7 +11,7 @@ describe('/rest/product/reviews', () => {
   describe('challenge "NoSql Command Injection"', () => {
     protractor.beforeEach.login({email: 'admin@' + config.get('application.domain'), password: '***REMOVED***'})
 
-    xit('should be possible to inject a command into the get route', () => { // FIXME Fails after merging gsoc-frontend and -challenges
+    it('should be possible to inject a command into the get route', () => { // FIXME Fails after merging gsoc-frontend and -challenges
       browser.waitForAngularEnabled(false)
       browser.executeScript(() => {
         var xhttp = new XMLHttpRequest()
