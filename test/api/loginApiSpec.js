@@ -125,10 +125,13 @@ describe('/rest/user/login', () => {
         password: '***REMOVED***'
       }
     })
-      .expect('status', 200)
+      .expect('status', 401)
       .expect('header', 'content-type', /application\/json/)
-      .expect('jsonTypes', 'authentication', {
-        token: Joi.string()
+      .expect('jsonTypes', 'data', {
+        tmpToken: Joi.string()
+      })
+      .expect('json', {
+        status: 'totp_token_requried'
       })
   })
 
