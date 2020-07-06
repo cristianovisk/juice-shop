@@ -65,7 +65,7 @@ describe('/chatbot', () => {
       email: `J12934@${config.get('application.domain')}`,
       password: '***REMOVED***'
     })
-    bot.addUser('12345' ,'J12934')
+    bot.addUser('12345', 'J12934')
     const trainingData = JSON.parse(fs.readFileSync(`data/BotTrainingData/${config.get('application.chatBot.trainingData')}`, { encoding: 'utf8' }))
     const testCommand = trainingData.intents[0].question
     const testResponse = await bot.respond(testCommand, 12345)
