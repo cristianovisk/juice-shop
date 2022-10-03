@@ -2,7 +2,7 @@ describe('/#/administration', () => {
   beforeEach(() => {
     cy.login({
       email: 'admin',
-      password: '***REMOVED***'
+      password: 'admin123'
     })
   })
   describe('challenge "adminSection"', () => {

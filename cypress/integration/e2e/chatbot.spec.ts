@@ -1,6 +1,6 @@
 describe('/chatbot', () => {
   beforeEach(() => {
-    cy.login({ email: 'admin', password: '***REMOVED***' })
+    cy.login({ email: 'admin', password: 'admin123' })
   })
 
   describe('challenge "killChatbot"', () => {

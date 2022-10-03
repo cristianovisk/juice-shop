@@ -7,7 +7,7 @@ describe('/#/register', () => {
     beforeEach(() => {
       cy.login({
         email: 'admin',
-        password: '***REMOVED***'
+        password: 'admin123'
       })
     })
 

@@ -53,7 +53,7 @@ describe('/#/login', () => {
       cy.task('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
           cy.get('#email').type(`admin@${appDomain}`)
-          cy.get('#password').type('***REMOVED***')
+          cy.get('#password').type('admin123')
           cy.get('#loginButton').click()
         }
       )
@@ -66,7 +66,7 @@ describe('/#/login', () => {
       cy.task('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
           cy.get('#email').type(`support@${appDomain}`)
-          cy.get('#password').type('***REMOVED***')
+          cy.get('#password').type('J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P')
           cy.get('#loginButton').click()
         }
       )
@@ -79,7 +79,7 @@ describe('/#/login', () => {
       cy.task('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
           cy.get('#email').type(`mc.safesearch@${appDomain}`)
-          cy.get('#password').type('***REMOVED***')
+          cy.get('#password').type('Mr. N00dles')
           cy.get('#loginButton').click()
         }
       )
@@ -105,7 +105,7 @@ describe('/#/login', () => {
       cy.task('GetFromConfig', 'application.domain').then(
         (appDomain: string) => {
           cy.get('#email').type(`J12934@${appDomain}`)
-          cy.get('#password').type('***REMOVED***')
+          cy.get('#password').type('0Y8rMnww$*9VFYE§59-!Fg1L6t&6lB')
           cy.get('#loginButton').click()
         }
       )

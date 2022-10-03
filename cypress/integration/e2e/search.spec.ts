@@ -53,7 +53,7 @@ describe('/rest/products/search', () => {
     beforeEach(() => {
       cy.login({
         email: 'admin',
-        password: '***REMOVED***'
+        password: 'admin123'
       })
     })
 
@@ -80,7 +80,7 @@ describe('/rest/products/search', () => {
     beforeEach(() => {
       cy.login({
         email: 'admin',
-        password: '***REMOVED***'
+        password: 'admin123'
       })
     })
 

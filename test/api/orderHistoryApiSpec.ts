@@ -15,7 +15,7 @@ describe('/rest/order-history', () => {
       headers: jsonHeader,
       body: {
         email: 'admin@' + config.get('application.domain'),
-        password: '***REMOVED***'
+        password: 'admin123'
       }
     })
       .expect('status', 200)
@@ -69,7 +69,7 @@ describe('/rest/order-history/orders', () => {
       headers: jsonHeader,
       body: {
         email: 'admin@' + config.get('application.domain'),
-        password: '***REMOVED***'
+        password: 'admin123'
       }
     })
       .expect('status', 200)
@@ -105,7 +105,7 @@ describe('/rest/order-history/:id/delivery-status', () => {
       headers: jsonHeader,
       body: {
         email: 'admin@' + config.get('application.domain'),
-        password: '***REMOVED***'
+        password: 'admin123'
       }
     })
       .expect('status', 200)

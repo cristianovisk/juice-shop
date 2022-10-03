@@ -209,7 +209,7 @@ describe('insecurity', () => {
     })
 
     it('returns MD5 hash for any input string', () => {
-      expect(security.hash('***REMOVED***')).to.equal('0192023a7bbd73250516f069df18b500')
+      expect(security.hash('admin123')).to.equal('0192023a7bbd73250516f069df18b500')
       expect(security.hash('password')).to.equal('5f4dcc3b5aa765d61d8327deb882cf99')
       expect(security.hash('')).to.equal('d41d8cd98f00b204e9800998ecf8427e')
     })
@@ -221,7 +221,7 @@ describe('insecurity', () => {
     })
 
     it('returns SHA-256 HMAC with "pa4qacea4VK9t9nGv7yZtwmj" as salt any input string', () => {
-      expect(security.hmac('***REMOVED***')).to.equal('6be13e2feeada221f29134db71c0ab0be0e27eccfc0fb436ba4096ba73aafb20')
+      expect(security.hmac('admin123')).to.equal('6be13e2feeada221f29134db71c0ab0be0e27eccfc0fb436ba4096ba73aafb20')
       expect(security.hmac('password')).to.equal('da28fc4354f4a458508a461fbae364720c4249c27f10fccf68317fc4bf6531ed')
       expect(security.hmac('')).to.equal('f052179ec5894a2e79befa8060cfcb517f1e14f7f6222af854377b6481ae953e')
     })

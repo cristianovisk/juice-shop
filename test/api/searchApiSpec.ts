@@ -88,7 +88,7 @@ describe('/rest/products/search', () => {
       .expect('json', 'data.?', {
         id: 1,
         price: `admin@${config.get('application.domain')}`,
-        deluxePrice: security.hash('***REMOVED***')
+        deluxePrice: security.hash('admin123')
       })
       .expect('json', 'data.?', {
         id: 2,
@@ -113,7 +113,7 @@ describe('/rest/products/search', () => {
       .expect('json', 'data.?', {
         id: 6,
         price: `support@${config.get('application.domain')}`,
-        deluxePrice: security.hash('***REMOVED***')
+        deluxePrice: security.hash('J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P')
       })
   })
 

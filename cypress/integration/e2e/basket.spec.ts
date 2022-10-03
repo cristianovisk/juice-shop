@@ -1,7 +1,7 @@
 describe('/#/basket', () => {
   describe('as admin', () => {
     beforeEach(() => {
-      cy.login({ email: 'admin', password: '***REMOVED***' })
+      cy.login({ email: 'admin', password: 'admin123' })
     })
 
     describe('challenge "negativeOrder"', () => {

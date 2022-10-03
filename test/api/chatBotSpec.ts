@@ -51,7 +51,7 @@ describe('/chatbot', () => {
     it('GET bot state for authenticated users contains request for username', async () => {
       const { token } = await login({
         email: `J12934@${config.get('application.domain')}`,
-        password: '***REMOVED***'
+        password: '0Y8rMnww$*9VFYE§59-!Fg1L6t&6lB'
       })
 
       await void frisby.setup({
@@ -71,7 +71,7 @@ describe('/chatbot', () => {
     it('Asks for username if not defined', async () => {
       const { token } = await login({
         email: `J12934@${config.get('application.domain')}`,
-        password: '***REMOVED***'
+        password: '0Y8rMnww$*9VFYE§59-!Fg1L6t&6lB'
       })
 
       const testCommand = trainingData.data[0].utterances[0]

@@ -5,7 +5,7 @@ describe('/rest/products/reviews', () => {
 
   describe('challenge "NoSQL DoS"', () => {
     beforeEach(() => {
-      cy.login({ email: 'admin', password: '***REMOVED***' })
+      cy.login({ email: 'admin', password: 'admin123' })
     })
     it('should be possible to inject a command into the get route', () => {
       cy.task('disableOnContainerEnv').then((disableOnContainerEnv) => {
@@ -52,7 +52,7 @@ describe('/rest/products/reviews', () => {
 
   describe('challenge "NoSQL Manipulation"', () => {
     beforeEach(() => {
-      cy.login({ email: 'admin', password: '***REMOVED***' })
+      cy.login({ email: 'admin', password: 'admin123' })
     })
 
     it('should be possible to inject a selector into the update route', () => {
@@ -75,7 +75,7 @@ describe('/rest/products/reviews', () => {
 
   describe('challenge "Forged Review"', () => {
     beforeEach(() => {
-      cy.login({ email: 'mc.safesearch', password: '***REMOVED***' })
+      cy.login({ email: 'mc.safesearch', password: 'Mr. N00dles' })
     })
 
     it('should be possible to edit any existing review', () => {
@@ -119,7 +119,7 @@ describe('/rest/products/reviews', () => {
 
   describe('challenge "Multiple Likes"', () => {
     beforeEach(() => {
-      cy.login({ email: 'mc.safesearch', password: '***REMOVED***' })
+      cy.login({ email: 'mc.safesearch', password: 'Mr. N00dles' })
     })
 
     it('should be possible to like reviews multiple times', () => {

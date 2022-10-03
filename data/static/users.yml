@@ -1,6 +1,6 @@
 -
   email: admin
-  password: '***REMOVED***'
+  password: 'admin123'
   key: admin
   role: 'admin'
   securityQuestion:
@@ -112,7 +112,7 @@
     answer: 'Brd?j8sEMziOvvBf§Be?jFZ77H?hgm'
 -
   email: support
-  password: '***REMOVED***'
+  password: 'J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P'
   key: support
   role: 'admin'
   securityQuestion:
@@ -129,7 +129,7 @@
     answer: '5N0wb41L' # http://rickandmorty.wikia.com/wiki/Snuffles
 -
   email: mc.safesearch
-  password: '***REMOVED***'
+  password: 'Mr. N00dles'
   key: rapper
   role: 'customer'
   securityQuestion:
@@ -137,7 +137,7 @@
     answer: 'I even shared my pizza bagels with you!'
 -
   email: J12934
-  password: '***REMOVED***'
+  password: '0Y8rMnww$*9VFYE§59-!Fg1L6t&6lB'
   key: jannik
   role: 'admin'
   securityQuestion:

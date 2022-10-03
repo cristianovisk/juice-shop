@@ -192,7 +192,7 @@ describe('/rest/2fa/status', () => {
   it('GET should indicate 2fa is not setup for users with 2fa disabled', async () => {
     const { token } = await login({
       email: `J12934@${config.get('application.domain')}`,
-      password: '***REMOVED***'
+      password: '0Y8rMnww$*9VFYE§59-!Fg1L6t&6lB'
     })
 
     // @ts-expect-error

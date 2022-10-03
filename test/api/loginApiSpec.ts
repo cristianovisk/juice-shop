@@ -61,7 +61,7 @@ describe('/rest/user/login', () => {
       headers: jsonHeader,
       body: {
         email: 'admin@' + config.get('application.domain'),
-        password: '***REMOVED***'
+        password: 'admin123'
       }
     })
       .expect('status', 200)
@@ -76,7 +76,7 @@ describe('/rest/user/login', () => {
       headers: jsonHeader,
       body: {
         email: 'support@' + config.get('application.domain'),
-        password: '***REMOVED***'
+        password: 'J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P'
       }
     })
       .expect('status', 200)
@@ -91,7 +91,7 @@ describe('/rest/user/login', () => {
       headers: jsonHeader,
       body: {
         email: 'mc.safesearch@' + config.get('application.domain'),
-        password: '***REMOVED***'
+        password: 'Mr. N00dles'
       }
     })
       .expect('status', 200)
