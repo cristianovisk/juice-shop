@@ -32,7 +32,7 @@ jobs:
         trivy fs . --scanners vuln
     - name: SAST
       run: |
-        bearer scan . --exit-code 0
+        bearer scan . --exit-code 0 --hide-progress-bar
       
     - name: Build Image Juice Shop
       run: |
