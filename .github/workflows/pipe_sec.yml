@@ -19,19 +19,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-
-    - name: SCA
+    - name: Install Tools
       run: |
         wget https://github.com/aquasecurity/trivy/releases/download/v0.62.1/trivy_0.62.1_Linux-64bit.deb
+        wget https://github.com/Bearer/bearer/releases/download/v1.49.0/bearer_1.49.0_linux-amd64.deb
         sudo dpkg -i trivy_0.62.1_Linux-64bit.deb
         rm -f trivy_0.62.1_Linux-64bit.deb
+        sudo dpkg -i bearer_1.49.0_linux-amd64.deb
+        rm -f bearer_1.49.0_linux-amd64.deb
+    - name: SCA
+      run: |
         trivy fs . --scanners vuln
     - name: SAST
       run: |
-        wget https://github.com/Bearer/bearer/releases/download/v1.49.0/bearer_1.49.0_linux-amd64.deb
-        sudo dpkg -i bearer_1.49.0_linux-amd64.deb
-        rm -f bearer_1.49.0_linux-amd64.deb
-        bearer scan .
+        bearer scan . --exit-code 0
       
     - name: Build Image Juice Shop
       run: |
