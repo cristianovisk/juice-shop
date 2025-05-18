@@ -1,0 +1,42 @@
+name: Pipeline Secure Model
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions: read-all
+
+jobs:
+  build-juice-shop:
+    name: Process Build Juice Shop
+    continue-on-error: false
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write
+
+    steps:
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+    - name: SCA
+      run: |
+        wget https://github.com/aquasecurity/trivy/releases/download/v0.62.1/trivy_0.62.1_Linux-64bit.deb
+        sudo dpkg -i trivy_0.62.1_Linux-64bit.deb
+        rm -f trivy_0.62.1_Linux-64bit.deb
+        trivy fs . --scanners vuln
+    - name: SAST
+      run: |
+        wget https://github.com/Bearer/bearer/releases/download/v1.49.0/bearer_1.49.0_linux-amd64.deb
+        sudo dpkg -i bearer_1.49.0_linux-amd64.deb
+        rm -f bearer_1.49.0_linux-amd64.deb
+        bearer scan .
+      
+    - name: Build Image Juice Shop
+      run: |
+        docker build . -t juice-shop:oplium
+
+    - name: Scan Container Juice Shop
+      run: |
+        trivy image --scanners vuln juice-shop:oplium
